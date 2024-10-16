@@ -2,7 +2,7 @@ import Link from "next/link";
 import moment from "moment";
 
 async function getEpisodes() {
-  const res = await fetch('https://rickandmortyapi.com/api/episode')
+  const res = await fetch('http://localhost:3000/api/episodes')
   return res.json();
 }
 
