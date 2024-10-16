@@ -1,5 +1,6 @@
 import Episode from "@/app/components/Episode";
 import EpisodeCharacters from "@/app/components/EpisodeCharacters";
+import { Suspense } from "react";
 
 
 function Episod({ params }) {
@@ -7,7 +8,9 @@ function Episod({ params }) {
 	return (
 		<>
 			<Episode id={id} />
-			<EpisodeCharacters id={id} />
+			<Suspense fallback={<div class="spinner"></div>}>
+				<EpisodeCharacters id={id} />
+			</Suspense>
 		</>
 	)
 }
