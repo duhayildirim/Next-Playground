@@ -4,7 +4,7 @@ import moment from "moment";
 async function getEpisode(id) {
 	const response = await fetch('https://rickandmortyapi.com/api/episode/' + id);
 	const ep = await response.json();
-	console.log(ep)
+
 	return ep;
 }
 
